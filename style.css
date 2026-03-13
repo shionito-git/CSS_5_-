@@ -55,18 +55,18 @@
   }
 }
 
+/* カード　*/
 .card {
   width: 300px;
   padding: 30px;
   border-radius: 20px;
-  background-color: #0f172a;
   background: linear-gradient(
     135deg,
     rgba(255, 100, 100, 0.8),
     rgba(255, 150, 150, 0.5)
   );
 
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
 
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 
@@ -80,4 +80,35 @@
   border-radius: 20px;
   background: linear-gradient(45deg, #ff6b6b, #ff9a9e);
   color: white;
+}
+
+/* パターン背景 */
+.pattern-bg {
+  height: 100vh;
+
+  background: linear-gradient(135deg, #667eea, #764ba2);
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-size: 40px;
+}
+
+/* SVGパターン */
+
+.pattern-bg::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  background-image: url("data:image/svg+xml,\
+<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'>\
+<circle cx='5' cy='5' r='2' fill='white' opacity='0.3'/>\
+</svg>");
 }
